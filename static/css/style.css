@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+body
+{
+    background: #090E34;
+}
+
+
+
+/* Custom CSS for smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom styles for Neumorphism effect */
+.neumorphism {
+      background: #090E34;
+      box-shadow: 5px 5px 10px #9197c9, -5px -5px 10px #0f1966;
+      border-radius: 10px;
+}
+
+.neumorphism:hover {
+      box-shadow: 8px 8px 15px #9197c9, -8px -8px 15px #0f1966;
+      /* scale by 10 */
+        transform: scale(1.05);
+        /* make transition smooth */
+        transition: all 0.3s ease;
+}
+
+.neumorphism-table {
+      background: #090E34;
+      box-shadow: 2px 2px 5px #9197c9, -5px -5px 10px #0f1966;
+}
+
+#draftYear{
+    background: #090E34;
+}
+
+#typing-text {
+    overflow: hidden; 
+    white-space: nowrap; 
+    animation: typing 3s steps(40) forwards; 
+    border-right: 1px solid white; 
+}
+
+
+@keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+
+/* Animation for Basketball and Trophy */
+@keyframes moveBasketball {
+    from {
+      transform: translateX(0) rotate(0) ;
+    }
+    to {
+      transform: translateX(120px) rotate(360deg) ; /* Adjust the distance as needed */
+    }
+  }
+
+
+  @keyframes tiltTrophy {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(30deg); /* Adjust the rotation angle as needed */
+    }
+  }
+
+  #basketball {
+    animation: moveBasketball 1s ease-in-out forwards; /* Adjust the duration and easing as needed */
+  }
+
+  #trophy {
+    animation: tiltTrophy 0.5s ease-in-out forwards; /* Adjust the duration and easing as needed */
+    animation-delay: 1s;
+  }
+

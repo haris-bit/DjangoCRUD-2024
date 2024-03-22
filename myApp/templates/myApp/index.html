@@ -1,0 +1,855 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- add tailwind css link here -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/
+  libs/tailwindcss/2.2.7/tailwind.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/
+  libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="{% static '/css/style.css' %}" />
+  <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/tailwind.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1"></script>
+
+
+
+  <title>The Picks Inn</title>
+</head>
+
+<body>
+  <!-- =============================================== -->
+  <!-- Navbar Section Start -->
+  <nav class="neumorphism-table sticky top-0 grid grid-cols-2 justify-around items-center p-4 bg-[#090E34] shadow-xl
+  z-50
+  ">
+    <!-- Logo -->
+    <div id="logo">
+      <h1 class="text-2xl font-bold text-white ml-8">The Picks Inn</h1>
+    </div>
+
+    <!-- Navbar Links -->
+    <div id="navbarLinks">
+      <ul class="md:flex md:space-x-12 md:text-white md:font-semibold hidden">
+        <li>
+          <a href="#home"> Home </a>
+        </li>
+        <li>
+          <a href="#scouting-performance"> Scouting Performance </a>
+        </li>
+        <li>
+          <a href="#top20"> Actual Top 20 </a>
+        </li>
+        <li>
+          <a href="#leaderboard"> Leaderboard </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar Section End -->
+  <!-- =============================================== -->
+
+  <!-- =============================================== -->
+  <!-- Hero Section Start -->
+  <section class="w-full h-full bg-[#090E34] flex justify-between gap-8 mt-12 px-2" id="home">
+    <div class="w-2/3 h-2/3 flex flex-col items-center mt-20">
+      <h1 class="text-4xl font-bold text-white text-center mt-2" id="typing-text">
+        Pick the Top 20 Prospects in the 2024 NBA Draft
+      </h1>
+      <p class="text-white text-center mt-4 text-xl">
+        Scout prospects, submit a big board and beat the experts
+      </p>
+
+      <span class="flex gap-4 mt-8">
+        <a>
+          <button class="px-16 py-6 rounded-md mt-4 neumorphism"
+          onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScTdEkjTorxLaaNK-OL3YSWyimSx2eSTENLdbpG9cKrWTiwTQ/viewform?pli=1')"
+          >
+            Submit Big Board
+          </button>
+        </a>
+      </span>
+
+      <div class="mt-12 mb-20 w-full flex justify-center gap-4 text-white">
+        <i id="basketball" class="fas fa-basketball-ball text-5xl"></i>
+        <i id="trophy" class="fas fa-trophy text-5xl" style="margin-left: 100px"></i>
+      </div>
+
+    </div>
+    <div class="w-1/3 h-1/3">
+      <img src="{% static 'images/hero-image.png' %}" alt="hero image" class="object-cover rounded-xl" />
+    </div>
+  </section>
+  <!-- Hero Section End -->
+  <!-- =============================================== -->
+
+
+  <!-- =============================================== -->
+  <!-- Quote Start -->
+  <div class="flex w-full justify-center items-center mt-12">
+    <div class="w-6xl px-2 relative">
+      <blockquote class="text-3xl italic font-semibold text-center relative">
+        Historically, there are about 20 players who end up mattering from each draft
+        <br>
+        <span class="block mt-2">- John Hollinger</span>
+      </blockquote>
+    </div>
+  </div>
+
+
+  <!-- Quote End -->
+  <!-- =============================================== -->
+
+
+  <!-- =============================================== -->
+  <hr class="w-1/2 mx-auto my-16" />
+  <!-- =============================================== -->
+  <!-- Main Features Start -->
+  <section class="w-full h-full bg-[#090E34] flex flex-col items-center mt-12 px-20">
+    <h2 class="text-xl font-bold text-blue-500 text-center mt-2">
+      Main Features
+    </h2>
+
+    <h1 class="text-5xl font-bold text-white text-center mt-2">
+      How it works
+    </h1>
+
+    <p class="w-1/2 mx-auto text-center text-white mt-4">
+      The Picks Inn was created to offer all basketball fans the chance to
+      have more fun with the NBA draft by choosing favorite prospects,
+      measuring your performance as a scout and sharing results with friends.
+    </p>
+
+    <div class="mt-12 flex gap-4">
+
+      <!-- Submit Your Big Board Card -->
+      <div class="w-80 p-6 neumorphism rounded-lg flex flex-col">
+        <div class="text-center">
+          <i class="fas fa-pen text-3xl text-blue-500"></i>
+        </div>
+        <h2 class="text-xl font-semibold mt-4">Submit Big Board</h2>
+        <p class="text-gray-400 mt-2">
+          Create your own big board by submitting a Google Form
+        </p>
+        <a href="#submit-bigboard">
+          <button class="bg-blue-500 text-white px-16 py-2 rounded-full mt-4 hover:bg-blue-600 focus:outline-none focus:ring focus:border-green-300
+            neumorphism
+            ">
+            Read More
+          </button>
+        </a>
+      </div>
+
+
+      <div class="w-70 p-6 neumorphism rounded-lg flex flex-col">
+        <!-- Font Awesome Icon -->
+        <div class="text-center">
+          <i class="fas fa-chart-line text-3xl text-blue-500"></i>
+        </div>
+
+        <!-- Title -->
+        <h2 class="text-xl font-semibold mt-4">My Performance</h2>
+
+        <!-- Short Description -->
+        <p class="text-gray-400 mt-2">
+          Monitor results of your board in real-time
+        </p>
+
+        <!-- Read More Button -->
+        <a href="#scouting-performance">
+          <button class="bg-blue-500 text-white px-16 py-2 rounded-full mt-4 hover:bg-blue-600 focus:outline-none focus:ring focus:border-green-300
+            neumorphism
+            ">
+            Read More
+          </button>
+        </a>
+      </div>
+
+
+      <!-- Leaderboard Card -->
+      <div class="w-80 p-6 neumorphism rounded-lg mr-4 flex flex-col">
+        <div class="text-center">
+          <i class="fas fa-trophy text-3xl"></i>
+        </div>
+        <h2 class="text-xl font-semibold mt-4">Leaderboard</h2>
+        <p class="text-gray-400 mt-2">
+          Compare your board against the professionals
+        </p>
+        <a href="#leaderboard">
+          <button class="bg-blue-500 text-white px-16 py-2 rounded-full mt-4 hover:bg-blue-600 focus:outline-none focus:ring focus:border-green-300
+            neumorphism
+            ">
+            Read More
+          </button>
+        </a>
+      </div>
+
+
+      <!-- Actual Top 20 Card -->
+      <div class="w-80 p-6 neumorphism rounded-lg mr-4 flex flex-col justify-center">
+        <div class="text-center">
+          <i class="fas fa-chart-bar text-3xl"></i>
+        </div>
+        <h2 class="text-xl font-semibold mt-4">Actual Top 20</h2>
+        <p class="text-gray-400 mt-2">Explore the top-performing prospects</p>
+        <a href="#top20">
+          <button class="bg-blue-500 text-white px-16 py-2 rounded-full mt-4 hover:bg-blue-600 focus:outline-none focus:ring focus:border-green-300
+            neumorphism
+            ">
+            Read More
+          </button>
+        </a>
+      </div>
+
+
+    </div>
+  </section>
+
+
+
+  <!-- Main Features End -->
+  <!-- =============================================== -->
+
+  <!-- Scouting Performance Section Start -->
+  <section class="w-full h-full bg-[#090E34] flex flex-col items-center gap-8 mt-12 mb-32 px-20"
+    id="scouting-performance">
+    <h2 class="text-4xl font-semibold text-center mt-24 ">Scouting Performance</h2>
+
+    <p class="text-center text-gray-400">
+      Monitor results of your board in real-time
+    </p>
+
+    <!-- Table -->
+    <table class="w-full neumorphism-table">
+      <!-- Table Header -->
+      <thead class="border-b border-gray-300">
+        <tr>
+          <th class="py-2 px-4 text-left">Metric</th>
+          <th class="py-2 px-4 text-left">2023</th>
+          <th class="py-2 px-4 text-left">Rank</th>
+        </tr>
+      </thead>
+      <!-- Table Body -->
+      <tbody>
+        <!-- Correct Picks -->
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">Correct Picks</td>
+          <td class="py-2 px-4">20</td>
+          <td class="py-2 px-4">1<sup class="text-sm">st</sup></td>
+        </tr>
+
+        <!-- Accuracy -->
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">Accuracy</td>
+          <td class="py-2 px-4">100%</td>
+          <td class="py-2 px-4">1<sup class="text-sm">st</sup></td>
+        </tr>
+
+        <!-- Sum PER -->
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">Sum PER</td>
+          <td class="py-2 px-4">99</td>
+          <td class="py-2 px-4">1<sup class="text-sm">st</sup></td>
+        </tr>
+
+        <!-- PER% -->
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">PER%</td>
+          <td class="py-2 px-4">100%</td>
+          <td class="py-2 px-4">1<sup class="text-sm">st</sup></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <!-- Scouting Performance Section End -->
+  <!-- =============================================== -->
+
+  <!-- =============================================== -->
+  <!-- Actual Top 20 Start -->
+  <!-- Actual Top 20 Section -->
+  <section class="pl-12 pr-12 py-8 rounded-lg shadow-md" id="top20">
+    <h2 class="text-4xl font-semibold mb-4 text-center mt-24">
+      Actual Top 20 Players
+    </h2>
+
+    <p class="text-center text-gray-400 mb-8">
+      The Top 20 Players Per Advanced Metrics
+    </p>
+
+    <!-- Dropdown for Draft Year -->
+    <div class="justify-center items-center w-full mb-4">
+      <label for="draftYear" class="text-white mr-2">Select Draft Year:</label>
+      <select id="draftYear" name="draftYear" class="px-12 py-2 rounded-md border >
+        <option value=" 2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023" selected>2023</option>
+      </select>
+    </div>
+
+
+    <!-- Table -->
+    <table class="w-full neumorphism-table">
+      <thead class="border-b border-gray-300">
+        <tr>
+          <th class="py-2 px-4 text-left">Draft Year</th>
+          <th class="py-2 px-4 text-left">Rank</th>
+          <th class="py-2 px-4 text-left">Name</th>
+          <th class="py-2 px-4 text-left">Pick #</th>
+          <th class="py-2 px-4 text-left">College team</th>
+          <th class="py-2 px-4 text-left">PER</th>
+          <th class="py-2 px-4 text-left">WS</th>
+          <th class="py-2 px-4 text-left">WS/48</th>
+          <th class="py-2 px-4 text-left">BPM</th>
+          <th class="py-2 px-4 text-left">VORP</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">1</td>
+          <td class="py-2 px-4 flex items-center">Victor Wembanyama</td>
+          <td class="py-2 px-4">1</td>
+          <td class="py-2 px-4">Metropolitans 92</td>
+          <td class="py-2 px-4">25.0</td>
+          <td class="py-2 px-4">10.0</td>
+          <td class="py-2 px-4">0.20</td>
+          <td class="py-2 px-4">8.0</td>
+          <td class="py-2 px-4">15.0</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">2</td>
+          <td class="py-2 px-4 flex items-center">Brandon Miller</td>
+          <td class="py-2 px-4">2</td>
+          <td class="py-2 px-4">Alabama</td>
+          <td class="py-2 px-4">22.0</td>
+          <td class="py-2 px-4">8.0</td>
+          <td class="py-2 px-4">0.18</td>
+          <td class="py-2 px-4">7.0</td>
+          <td class="py-2 px-4">12.0</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">3</td>
+          <td class="py-2 px-4 flex items-center">Scoot Henderson</td>
+          <td class="py-2 px-4">3</td>
+          <td class="py-2 px-4">Kentucky</td>
+          <td class="py-2 px-4">21.0</td>
+          <td class="py-2 px-4">7.5</td>
+          <td class="py-2 px-4">0.17</td>
+          <td class="py-2 px-4">6.5</td>
+          <td class="py-2 px-4">11.0</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">4</td>
+          <td class="py-2 px-4 flex items-center">Amen Thompson</td>
+          <td class="py-2 px-4">4</td>
+          <td class="py-2 px-4">Indiana</td>
+          <td class="py-2 px-4">19.5</td>
+          <td class="py-2 px-4">7.0</td>
+          <td class="py-2 px-4">0.16</td>
+          <td class="py-2 px-4">6.0</td>
+          <td class="py-2 px-4">10.0</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">5</td>
+          <td class="py-2 px-4 flex items-center">Ausar Thompson</td>
+          <td class="py-2 px-4">5</td>
+          <td class="py-2 px-4">Overland Park Wizards</td>
+          <td class="py-2 px-4">19.0</td>
+          <td class="py-2 px-4">6.5</td>
+          <td class="py-2 px-4">0.15</td>
+          <td class="py-2 px-4">5.5</td>
+          <td class="py-2 px-4">9.5</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">6</td>
+          <td class="py-2 px-4 flex items-center">Anthony Black</td>
+          <td class="py-2 px-4">6</td>
+          <td class="py-2 px-4">Arkansas</td>
+          <td class="py-2 px-4">18.5</td>
+          <td class="py-2 px-4">6.0</td>
+          <td class="py-2 px-4">0.14</td>
+          <td class="py-2 px-4">5.0</td>
+          <td class="py-2 px-4">8.5</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">7</td>
+          <td class="py-2 px-4 flex items-center">Bilal Coulibaly</td>
+          <td class="py-2 px-4">7</td>
+          <td class="py-2 px-4">France</td>
+          <td class="py-2 px-4">18.0</td>
+          <td class="py-2 px-4">5.5</td>
+          <td class="py-2 px-4">0.13</td>
+          <td class="py-2 px-4">4.5</td>
+          <td class="py-2 px-4">7.5</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">8</td>
+          <td class="py-2 px-4 flex items-center">Jarace Walker</td>
+          <td class="py-2 px-4">8</td>
+          <td class="py-2 px-4">Auburn</td>
+          <td class="py-2 px-4">17.5</td>
+          <td class="py-2 px-4">5.0</td>
+          <td class="py-2 px-4">0.12</td>
+          <td class="py-2 px-4">4.0</td>
+          <td class="py-2 px-4">6.5</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">9</td>
+          <td class="py-2 px-4 flex items-center">Taylor Hendricks</td>
+          <td class="py-2 px-4">9</td>
+          <td class="py-2 px-4">Kansas</td>
+          <td class="py-2 px-4">17.0</td>
+          <td class="py-2 px-4">4.5</td>
+          <td class="py-2 px-4">0.11</td>
+          <td class="py-2 px-4">3.5</td>
+          <td class="py-2 px-4">5.5</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">10</td>
+          <td class="py-2 px-4 flex items-center">Cason Wallace</td>
+          <td class="py-2 px-4">10</td>
+          <td class="py-2 px-4">Kentucky</td>
+          <td class="py-2 px-4">16.5</td>
+          <td class="py-2 px-4">4.0</td>
+          <td class="py-2 px-4">0.10</td>
+          <td class="py-2 px-4">3.0</td>
+          <td class="py-2 px-4">4.5</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">11</td>
+          <td class="py-2 px-4 flex items-center">Jett Howard</td>
+          <td class="py-2 px-4">11</td>
+          <td class="py-2 px-4">Michigan</td>
+          <td class="py-2 px-4">16.0</td>
+          <td class="py-2 px-4">3.5</td>
+          <td class="py-2 px-4">0.09</td>
+          <td class="py-2 px-4">2.5</td>
+          <td class="py-2 px-4">3.5</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">12</td>
+          <td class="py-2 px-4 flex items-center">Dereck Lively II</td>
+          <td class="py-2 px-4">12</td>
+          <td class="py-2 px-4">Duke</td>
+          <td class="py-2 px-4">15.5</td>
+          <td class="py-2 px-4">3.0</td>
+          <td class="py-2 px-4">0.08</td>
+          <td class="py-2 px-4">2.0</td>
+          <td class="py-2 px-4">2.5</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">13</td>
+          <td class="py-2 px-4 flex items-center">Gradey Dick</td>
+          <td class="py-2 px-4">13</td>
+          <td class="py-2 px-4">Kansas</td>
+          <td class="py-2 px-4">15.0</td>
+          <td class="py-2 px-4">2.5</td>
+          <td class="py-2 px-4">0.07</td>
+          <td class="py-2 px-4">1.5</td>
+          <td class="py-2 px-4">2.0</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">14</td>
+          <td class="py-2 px-4 flex items-center">Jordan Hawkins</td>
+          <td class="py-2 px-4">14</td>
+          <td class="py-2 px-4">Creighton</td>
+          <td class="py-2 px-4">14.5</td>
+          <td class="py-2 px-4">2.0</td>
+          <td class="py-2 px-4">0.06</td>
+          <td class="py-2 px-4">1.0</td>
+          <td class="py-2 px-4">1.5</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">15</td>
+          <td class="py-2 px-4 flex items-center">Julian Strawther</td>
+          <td class="py-2 px-4">15</td>
+          <td class="py-2 px-4">Creighton</td>
+          <td class="py-2 px-4">0.06</td>
+          <td class="py-2 px-4">1.0</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">16</td>
+          <td class="py-2 px-4 flex items-center">Emoni Bates</td>
+          <td class="py-2 px-4">16</td>
+          <td class="py-2 px-4">Creighton</td>
+          <td class="py-2 px-4">0.06</td>
+          <td class="py-2 px-4">1.0</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">17</td>
+          <td class="py-2 px-4 flex items-center">Jalen Hood-Schifino </td>
+          <td class="py-2 px-4">17</td>
+          <td class="py-2 px-4">Creighton</td>
+          <td class="py-2 px-4">0.06</td>
+          <td class="py-2 px-4">1.0</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">18</td>
+          <td class="py-2 px-4 flex items-center">Keyontae Johnson </td>
+          <td class="py-2 px-4">18</td>
+          <td class="py-2 px-4">Creighton</td>
+          <td class="py-2 px-4">0.06</td>
+          <td class="py-2 px-4">1.0</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">19</td>
+          <td class="py-2 px-4 flex items-center">Adem Bona </td>
+          <td class="py-2 px-4">19</td>
+          <td class="py-2 px-4">Creighton</td>
+          <td class="py-2 px-4">0.06</td>
+          <td class="py-2 px-4">1.0</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+        </tr>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">20</td>
+          <td class="py-2 px-4 flex items-center">Terry Roberts</td>
+          <td class="py-2 px-4">20</td>
+          <td class="py-2 px-4">Creighton</td>
+          <td class="py-2 px-4">0.06</td>
+          <td class="py-2 px-4">1.0</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+          <td class="py-2 px-4">-</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </section>
+
+  <!-- Actual Top 20 End -->
+  <!-- =============================================== -->
+
+  <!-- =============================================== -->
+  <!-- Leaderboard Start -->
+  <section class="w-full h-full bg-[#090E34] flex flex-col items-center gap-8 mt-12 mb-32 px-20" id="leaderboard">
+    <h2 class="text-4xl font-semibold text-white text-center mt-24 ">Leaderboard</h2>
+
+    <p class="text-center text-gray-400">
+      Compare your board against the professionals
+    </p>
+
+    <!-- Dropdown for Draft Year -->
+    <div>
+      <label for="draftYear" class="text-white mr-2">Select Draft Year:</label>
+      <select id="draftYear" name="draftYear" class="px-12 py-2 rounded-md border >
+        <option value=" 2021">2021</option>
+        <option value="2022">2022</option>
+        <option value="2023" selected>2023</option>
+      </select>
+    </div>
+
+    <!-- Table -->
+    <table class="w-full neumorphism-table">
+      <!-- Table Header -->
+      <thead class="border-b border-gray-300">
+        <tr>
+          <th class="py-2 px-4 text-left">Draft Year</th>
+          <th class="py-2 px-4 text-left">Rank</th>
+          <th class="py-2 px-4 text-left">Username</th>
+          <th class="py-2 px-4 text-left">Picks Correct</th>
+          <th class="py-2 px-4 text-left">Accuracy</th>
+          <th class="py-2 px-4 text-left">Sum PER</th>
+          <th class="py-2 px-4 text-left">PER%</th>
+        </tr>
+      </thead>
+      <!-- Table Body -->
+      <tbody>
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">1<sup>st</sup></td>
+          <td class="py-2 px-4">John Smith</td>
+          <td class="py-2 px-4">20</td>
+          <td class="py-2 px-4">100%</td>
+          <td class="py-2 px-4">99</td>
+          <td class="py-2 px-4">100%</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">2<sup>nd</sup></td>
+          <td class="py-2 px-4">Jane Doe</td>
+          <td class="py-2 px-4">18</td>
+          <td class="py-2 px-4">90%</td>
+          <td class="py-2 px-4">95</td>
+          <td class="py-2 px-4">98%</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">3<sup>rd</sup></td>
+          <td class="py-2 px-4">Mike Johnson</td>
+          <td class="py-2 px-4">17</td>
+          <td class="py-2 px-4">85%</td>
+          <td class="py-2 px-4">92</td>
+          <td class="py-2 px-4">94%</td>
+        </tr>
+
+        <!-- Sample Data (additional entries) -->
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">4<sup>th</sup></td>
+          <td class="py-2 px-4">Emily Clark</td>
+          <td class="py-2 px-4">16</td>
+          <td class="py-2 px-4">80%</td>
+          <td class="py-2 px-4">88</td>
+          <td class="py-2 px-4">90%</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">5<sup>th</sup></td>
+          <td class="py-2 px-4">Alex Williams</td>
+          <td class="py-2 px-4">15</td>
+          <td class="py-2 px-4">75%</td>
+          <td class="py-2 px-4">85</td>
+          <td class="py-2 px-4">88%</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">6<sup>th</sup></td>
+          <td class="py-2 px-4">Chris Turner</td>
+          <td class="py-2 px-4">14</td>
+          <td class="py-2 px-4">70%</td>
+          <td class="py-2 px-4">82</td>
+          <td class="py-2 px-4">85%</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">7<sup>th</sup></td>
+          <td class="py-2 px-4">Jessica Miller</td>
+          <td class="py-2 px-4">13</td>
+          <td class="py-2 px-4">65%</td>
+          <td class="py-2 px-4">78</td>
+          <td class="py-2 px-4">82%</td>
+        </tr>
+
+        <tr class="border-b border-gray-300">
+          <td class="py-2 px-4">2023</td>
+          <td class="py-2 px-4">8<sup>th</sup></td>
+          <td class="py-2 px-4">Brian Davis</td>
+          <td class="py-2 px-4">12</td>
+          <td class="py-2 px-4">60%</td>
+          <td class="py-2 px-4">75</td>
+          <td class="py-2 px-4">80%</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+  <!-- Leaderboard End -->
+  <!-- =============================================== -->
+
+
+  <!-- =============================================== -->
+  <!-- Submit BigBoard Start -->
+  <section class="mt-12 mb-2" id="submit-bigboard">
+    <h2 class="text-2xl font-bold text-center">Submit Your BigBoard</h2>
+    <p class="text-center text-gray-500">Submit your Big Board for the 2023 NBA Draft</p>
+
+    <div class="flex justify-center mt-8">
+      <button class="px-8 py-2 rounded-md border text-[#090E34] neumorphism"
+        onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLScTdEkjTorxLaaNK-OL3YSWyimSx2eSTENLdbpG9cKrWTiwTQ/viewform?pli=1')"
+        >Submit
+        BigBoard</button>
+    </div>
+    <!-- =============================================== -->
+
+    <hr class="border-[#090E34] border-opacity-50 border-t-2 border-b-0 border-r-0 border-l-0 w-1/2 mx-auto mt-20 mb-8">
+
+  </section>
+
+
+
+  <!-- =============================================== -->
+  <!-- Footer Start -->
+  <!-- Footer Section -->
+  <footer class="bg-[#090E34] text-white mt-2">
+    <div class="container mx-auto py-8 flex flex-col items-center">
+      <!-- Logo or Site Name -->
+      <h1 class="text-3xl font-bold mb-4">ThePicksInn</h1>
+      <!-- Social Media Icons -->
+      <div class="flex space-x-4">
+        <a href="#" class="text-white hover:text-gray-300 transition-all duration-300">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300 transition-all duration-300">
+          <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="text-white hover:text-gray-300 transition-all duration-300">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+
+      <!-- Copyright Information -->
+      <p class="mt-4 text-sm">&copy; 2023 ThePicksInn. All rights reserved.</p>
+    </div>
+  </footer>
+  <!-- Footer End -->
+  <!-- =============================================== -->
+
+
+
+  <!-- =============================================== -->
+  <!-- Scripts -->
+  <script>
+
+    // Animation code here
+    anime({
+      targets: '#logo',
+      opacity: [0, 1],
+      translateY: [-10, 0],
+      easing: 'easeInOutQuad',
+    });
+    // Animation for navbar links
+    anime({
+      targets: '#navbarLinks li',
+      opacity: [0, 1],
+      translateY: [-10, 0],
+      delay: anime.stagger(100),
+      easing: 'easeInOutQuad',
+    });
+
+    // Text Animation
+    anime.timeline({ loop: false })
+      .add({
+        targets: '#typing-text',
+        opacity: [0, 1],
+        easing: 'easeInOutQuad',
+        duration: 1500
+      })
+      .add({
+        targets: '#typing-text',
+        opacity: [1, 0],
+        easing: 'easeInOutQuad',
+        duration: 1500,
+        delay: 2000
+      })
+      .add({
+        targets: '#typing-text',
+        opacity: [0, 1],
+        easing: 'easeInOutQuad',
+        duration: 1500
+      });
+
+    // Basketball and Trophy Animation
+
+    anime
+      ({
+        targets: "#basketball",
+        translateX: 120, // Move to the right
+        easing: "easeInOutQuad",
+        duration: 800,
+        rotate: 360, // Rotate 360 degrees
+      })
+      .add({
+        targets: "#trophy",
+        rotate: 15, // Tilt the trophy
+        easing: "easeInOutQuad",
+        duration: 500,
+      });
+
+    anime({
+      targets: '#submitBtn',
+      opacity: [0, 1],
+      translateY: [20, 0],
+      easing: 'easeInOutQuad',
+      duration: 1000,
+      delay: anime.stagger(100),
+    });
+
+    // Animation for the "Leaderboard" button
+    anime({
+      targets: '#leaderboardBtn',
+      opacity: [0, 1],
+      translateY: [20, 0],
+      easing: 'easeInOutQuad',
+      duration: 1000,
+      delay: anime.stagger(100),
+    });
+
+    // Function to handle the animation when an element comes into view
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const targets = entry.target.querySelectorAll('.animated-element');
+
+          targets.forEach(target => {
+            anime({
+              targets: target,
+              opacity: [0, 1],
+              translateY: [20, 0],
+              easing: 'easeInOutQuad',
+              duration: 1000,
+            });
+          });
+
+          // Stop observing the target element once the animation is triggered
+          observer.unobserve(entry.target);
+        }
+      });
+    }
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+
+    // Observe the elements with the "animated-element" class
+    document.querySelectorAll('.animated-element').forEach(element => {
+      observer.observe(element);
+    });
+
+
+  </script>
+
+  <!-- =============================================== -->
+
+
+</body>
+
+</html>
